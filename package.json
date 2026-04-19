@@ -1,0 +1,12 @@
+{
+  "name": "multi-vendor-saas",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd landing-page && npm run dev\" \"cd vandor && npm run dev\" \"cd admin && npm run dev\" \"cd vandor_website && npm run dev\"",
+    "dev:backend": "cd server && npm run dev",
+    "dev:landing": "cd landing-page && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

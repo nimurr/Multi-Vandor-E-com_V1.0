@@ -1,0 +1,179 @@
+🚀 Project Prompt: Multi-Vendor SaaS E-commerce Platform (Shopify-like with Subscription System)
+
+I am an expert full-stack MERN developer building a scalable multi-vendor SaaS e-commerce platform similar to Shopify. This system enables vendors to register, request their own fully functional e-commerce website with a custom domain, and operate it under a subscription-based business model.
+
+The platform is designed with a multi-tenant architecture, where each vendor has an isolated store running on their own domain, while the core system is centrally managed by an admin.
+
+📁 Project Structure
+
+The application is divided into the following main modules:
+
+*landing_Page
+Public-facing website where vendors can register, log in, and learn about the platform.
+*vendor
+Vendor dashboard where users manage their store, domain, and subscription.
+*vendor_website
+Dynamically generated storefront for each vendor, served via their custom domain.
+*admin
+Admin dashboard for managing vendors, reviewing requests, handling subscriptions, and deploying stores.
+*server
+Backend API built with Node.js, Express.js, and MongoDB, handling all business logic, authentication, and data management.
+
+
+
+🔄 System Workflow
+1. Vendor Registration & Authentication
+Vendors visit the Landing Page
+Register using:
+Business Name
+Full Name
+Email Address
+Password
+After successful registration:
+Vendor logs in
+Redirected to Vendor Dashboard
+2. Vendor Dashboard Features
+
+Once logged in, vendors can:
+
+Submit a request to create their store
+Provide:
+Custom domain name (e.g., yourstore.com)
+DNS / domain configuration details
+Track store request status:
+Pending
+Approved
+Deployed
+
+Additional capabilities:
+
+View subscription status
+Monitor remaining trial or active days
+Upgrade or renew subscription
+Access payment history
+3. Admin Panel Features
+
+Admin has full control over the platform:
+
+View all vendor registrations
+Review store creation requests
+Validate domain and DNS configuration
+Approve or reject requests
+Deploy vendor websites dynamically
+Manage all vendors and their stores
+Monitor subscription statuses
+Manually activate/deactivate vendor stores
+Create and manage subscription plans (pricing & duration)
+Track all payments
+4. Vendor Website System
+Each vendor is allowed:
+Only one store per account
+Each store:
+Runs on a custom domain provided by the vendor
+The system dynamically serves:
+Vendor-specific products
+Vendor-specific content
+Architecture:
+Multi-tenant (shared backend, isolated data)
+Domain-based routing system
+💳 Subscription System (Core Business Model)
+🎁 Free Trial
+Every vendor receives:
+1-month free trial
+Full access to all features
+Trial starts:
+After the store is deployed
+💼 Paid Subscription Plans
+
+After the trial period ends, vendors must subscribe to continue using their store.
+
+Available plans:
+
+Monthly Subscription
+6-Month Subscription
+Yearly Subscription
+⛔ Restriction Logic
+If subscription expires:
+Vendor website is automatically suspended
+Store becomes inaccessible to users
+Reactivation:
+Only after successful payment or admin intervention
+🔁 Subscription Lifecycle Flow
+Vendor registers
+Requests store
+Admin approves & deploys store
+Free trial starts (1 month)
+Trial expires → vendor notified
+Vendor purchases a subscription
+Payment successful → store remains active
+Subscription expires → store auto-disabled
+Vendor renews → store reactivated
+📊 Vendor Dashboard (Subscription Features)
+Subscription status:
+Trial
+Active
+Expired
+Remaining days counter
+Upgrade / Renew subscription button
+Payment and billing history
+🛠 Admin Panel (Subscription Control)
+Monitor all vendor subscriptions
+View active, trial, and expired users
+Manually enable/disable stores
+Manage subscription plans:
+Pricing
+Duration
+Access payment logs and reports
+🧠 Core System Features
+Multi-tenant SaaS architecture
+Domain-based dynamic routing
+Vendor-specific isolated data handling
+One vendor = One store restriction
+Subscription-based access control
+Secure authentication & authorization (JWT / sessions)
+Admin-controlled deployment pipeline
+Scalable backend architecture
+⚙️ Technical Architecture & Considerations
+Backend
+Node.js + Express.js
+MongoDB (multi-tenant data design)
+Frontend
+React.js or Next.js (SSR for storefront recommended)
+Payment Integration
+SSLCommerz (for local market)
+Stripe (for international payments)
+Subscription Management
+Subscription schema:
+startDate
+endDate
+planType
+status
+Middleware
+Validate subscription on every request
+Block API access if subscription is expired
+Background Jobs
+Cron jobs for:
+Auto-expiring subscriptions
+Sending notifications
+Domain Handling
+Nginx / Reverse Proxy
+Wildcard domain support
+Dynamic domain mapping to vendor stores
+🎯 Final Goal
+
+To build a fully automated, scalable SaaS e-commerce ecosystem where:
+
+Vendors can:
+Register بسهولة
+Launch their own branded store
+Use custom domains
+Manage business independently
+Platform owner can:
+Monetize through subscriptions
+Control deployments centrally
+Scale to support thousands of vendors
+🔥 End Vision
+
+A complete lifecycle system:
+
+Register → Request Store → Deploy → Free Trial → Subscription → Expire → Renew → Scale

@@ -1,0 +1,9 @@
+/node_modules
+/admin/node_modules
+/landing-page/node_modules
+/server/node_modules
+/vandor/node_modules
+/vandor_website/node_modules
+/.next
+/out
+/dist
